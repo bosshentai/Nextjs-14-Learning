@@ -1,13 +1,13 @@
-version: "3.5"
+version: '3.5'
 
 services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
-    container_name: testing-nextjs
+      dockerfile: Dev.Dockerfile
+    container_name: docker-next
     ports:
-      - '3000:3000'
+      - 3000:3000
     volumes:
       - .:/app
-      - /app/nodes_modules
+      - /app/node_modules
