@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
   return Response.json(filteredComments);
 }
 
-export async function POST(request: Response) {
+export async function POST(request: Request) {
   const comment = await request.json();
 
   const newComment = {
